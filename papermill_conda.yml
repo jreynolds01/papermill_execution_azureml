@@ -1,0 +1,12 @@
+# This is the dependency tree for running
+
+name: pm_simple
+
+dependencies:
+  - python=3.6   
+  - ipykernel>=4.6.1
+  - numpy>=1.13.3
+  - pip: 
+    - pandas>=0.23.4
+    - papermill>=0.15.0
+    - azureml-sdk>=1.0.15
