@@ -1,6 +1,6 @@
 # Goal
 
-The goal of this repository is to show how one can use the `papermill` module to run notebooks.
+The goal of this repository is to show how one can use the `papermill` module to run notebooks with [AzureML-SDK](https://docs.microsoft.com/en-us/python/api/overview/azure/ml/intro?view=azure-ml-py).
 
 ## Using this repository
 
@@ -12,5 +12,10 @@ There are two main notebooks used:
 ## Requirements
 
 The notebooks require that `azureml-sdk` is installed in the kernel environment. The notebook goes through
-a few examples of how you can run a template script that runs notebooks. In the case of this example, `simple-pm-run.ipynb` will submit the `papermill_run_notebook.py` script, which will, in turn, execute the `hello_world.ipynb`
+a few examples of how you can run a template script that runs notebooks. 
 
+## Workload
+
+In the case of this example, `simple-pm-run.ipynb` will submit the `papermill_run_notebook.py` script in the `./projectDir` directory, which will, in turn, execute the `hello_world.ipynb` notebook (also in the `./projectDir` directory).
+
+This entry script (`papermill_run_notebook.py`) is intended as a simplified version of the one used in the [Microsoft/Recommenders repository](https://github.com/Microsoft/Recommenders/blob/jumin/dnn/reco_utils/aml/wide_deep.py) so that I can show effects of parameters such as `hash_paths` in `PythonScriptStep()` and `regenerate_outputs` in `Experiment.submit()`. See [simple-pm-run-as-pipeline.ipynb](simple-pm-run-as-pipeline.ipynb) for details.
