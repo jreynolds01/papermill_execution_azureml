@@ -1,4 +1,7 @@
-# This is the dependency tree for running
+# This is the dependency tree for running both of the following:
+# python ./projectDir/papermill_run_notebook.py
+# AND
+# simple-pm-run.ipynb
 
 name: pm_simple
 
